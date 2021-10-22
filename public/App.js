@@ -10,7 +10,7 @@ function delay(delayInms) {
   });
 }
 
-document.body.style.backgroundColor = "#FF99E6";
+document.body.style.backgroundColor = "#008F11";
 
 class App extends React.Component {
   constructor(props) {
@@ -154,15 +154,15 @@ class App extends React.Component {
 
   async changeBg() {
     const { colors, chapters } = this.state;
-    for (let i = 0; i < colors.length; i++) {
+    for (let i = 0; i < 50; i++) {
       await delay(i * 5);
-      const color = colors[Math.floor(Math.random() * colors.length)];
+      // const color = colors[Math.floor(Math.random() * colors.length)];
       this.setState({
         text: chapters[Math.floor(Math.random() * chapters.length)],
       });
-      document.body.style.backgroundColor = color;
+      // document.body.style.backgroundColor = color;
     }
-    document.body.style.backgroundColor = "#FF99E6";
+    document.body.style.backgroundColor = "#009F21";
   }
 
   render() {
